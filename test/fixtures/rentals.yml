@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asset_id_id: 
+  user_id_id: 
+  rented_by_id: 
+  start_date: 2015-03-16 17:20:07
+  end_date: 2015-03-16 17:20:07
+
+two:
+  asset_id_id: 
+  user_id_id: 
+  rented_by_id: 
+  start_date: 2015-03-16 17:20:07
+  end_date: 2015-03-16 17:20:07

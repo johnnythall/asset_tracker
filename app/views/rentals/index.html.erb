@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rentals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Asset</th>
+      <th>User</th>
+      <th>Rental Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rentals.each do |rental| %>
+      <tr>
+        <td><%= Asset.find(rental.asset_id_id).name %></td>
+        <td><%= User.find(rental.user_id_id).name %></td>
+		<% if rental.end_date > DateTime.now %>
+        	<td>OK</td>
+		<% else %>
+			<td>OVERDUE</td>
+		<%end%>
+        <td><%= link_to 'Show', rental %></td>
+        <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
+        <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rental', new_rental_path %>

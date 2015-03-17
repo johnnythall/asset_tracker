@@ -1,0 +1,20 @@
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+	<h1>Admin Dashboard</h1>
+	<p>Think of all the things that could go here! Graphs for days, a plethora of statistics, support messages, or whatever else your heart desires!</p>
+	<p>In the meantime though we can just enjoy this picture of Nic Cage!</p>
+	<img src="http://www.placecage.com/c/720/405">
+<% else %>
+<div class="jumbotron">
+  <h1>FTV Inventory</h1>
+  <p>Welcome to the NEW asset tracking software for the Pacific Union College Film & Television Department! Click the button below to be taken to a list of our assets!</p>
+  <p><a class="btn btn-primary btn-lg" <a href="/assets" role="button">Click Here</a></p>
+  </div>
+  <% end %>
+<% else %>
+<div class="jumbotron">  
+  <h1>FTV Inventory</h1>
+  <p>Welcome to the NEW asset tracking software for the Pacific Union College Film & Television Department! Please sign in to see the assets available in our department!</p>
+  </div>
+<%end%>
