@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Assets</h1>
+<h1>Assets</h1>
 
 <table>
   <thead>
@@ -23,7 +23,7 @@
         <td><%= asset.barcode %></td>
         <td><%= asset.name %></td>
         <td><%= asset.description %></td>
-        <td><%= asset.category %></td>
+        <td><%= asset.category.name %></td>
         <td><%= asset.location %></td>
         <td><%= asset.value %></td>
         <td><%= asset.access_level %></td>
